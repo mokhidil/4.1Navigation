@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4.1 Navigation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale=1">        
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #2A77AB;
+            padding: 100px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .container{
+            width: 600px;
+            height: 250px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FDFDFD;
+            border: none;
+            border-radius: 5px;
+        }
+        input{
+            margin-bottom: 30px;
+            padding: 10px;             
+            border: none;
+            border-bottom: 2px solid #8a868a;
+            transition: 0.5s all ease;
+        }
+        input:focus{
+            outline: none;
+            border-bottom: 2px solid #333033;
+        }
+        ul li{
+            list-style: none;
+            display: inline;
+        }
+        .btn{
+            margin: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #afadaf;
+            color: black;
+            font-weight: 600;
+        }
+        .btn-tab{ 
+            margin: 10px;
+            padding: 10px;
+            border: none;           
+            background-color: transparent;
+            font-weight: 900;
+            font-size: 24px;
+            color: #afadaf; 
+            text-transform: uppercase;
+            transition: all 1s ease;
+        }
+        .btn-active{
+            color: #000; 
+        }
+        
+        .btn:hover{
+            background-color: #afadaf;            
+        }
+       
+        p{
+            font-weight: 500;
+            color: #000;
+            padding:20px; 
+        }
+    </style>
+    <body>
+       
+        <div class="container">
+            <form >
+                <input type="number" id="indexTab" placeholder="Enter tab index">
+                <button class="btn" id="changBtn">Change tab</button>
+            </form>
+
+            <ul id="btn-group">
+                <li class="btn-tab btn-active" onclick="change(1)">Positive</li>
+                <li class="btn-tab" onclick="change(2)">Negative</li>
+                <li class="btn-tab" onclick="change(3)">Neutral</li>
+            </ul>
+
+            <p id="tabTitle">Positive  content</p>
+             
+        </div> 
+            
+        <script src="main.js"></script>
+    </body>
+</html>
